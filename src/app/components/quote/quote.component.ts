@@ -22,7 +22,7 @@ export class QuoteComponent implements OnInit {
   }
   deleteGoal(isComplete, index) {
     if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].author}?`)
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].description}?`)
 
       if (toDelete) {
         this.quotes.splice(index, 1)

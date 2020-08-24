@@ -1,23 +1,12 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive } from '@angular/core';
 
 @Directive({
   selector: '[appHightlight]'
 })
 export class HightlightDirective {
-  constructor(private elem: ElementRef) { }
+  constructor() { }
 
-  @HostListener("click") onClicks() {
-    this.textDeco("line-through")
-  }
 
-  @HostListener("dblclick") onDoubleClicks() {
-    this.textDeco("None")
-  }
-
-  private textDeco(action: string) {
-    this.elem.nativeElement.style.textDecoration = action;
-
-  }
 }
 
 

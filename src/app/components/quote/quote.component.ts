@@ -20,6 +20,9 @@ export class QuoteComponent implements OnInit {
     console.log(this.quotes)
 
   }
+  toggleDetails(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].description}?`)
